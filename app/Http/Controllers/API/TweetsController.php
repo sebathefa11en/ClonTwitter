@@ -7,12 +7,15 @@ use App\Http\Requests\StoreTweetRequest;
 use App\Http\Resources\TweetResource;
 use App\Models\Tweets;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class TweetsController extends Controller
 {
     public function index()
     {
-        return TweetResource::collection(Tweets::all());
+        $sql = "SELECT t.id, t.tweet,users.username  FROM tweets as t INNER JOIN users on users.id = t.user_id ORDER BY t.id DESC";
+        return DB::select($sql);
+        //return TweetResource::collection(Tweets::all());
     }
 
     /**

@@ -17,8 +17,8 @@ class TweetResource extends JsonResource
     {
         return [
             'id' => $this->id,
-            'nombres' => Str::of($this->tweet),
-            'apellidos' => $this->user_id,
+            'tweet' => Str::of($this->tweet),
+            'user_id' => $this->user_id,
             'created_at' => $this->created_at->format('d-m-Y'),
             'updated_at' => $this->updated_at->format('d-m-Y')
         ];

@@ -15,8 +15,9 @@ class CreateHistoryLoginsTable extends Migration
     {
         Schema::create('history_logins', function (Blueprint $table) {
             $table->id();
-            $table->integer('users_id')->unsigned();
             $table->timestamp('timelog');
+            $table->unsignedBigInteger('users_id')->nullable();
+            $table->foreign('users_id')->references('id')->on('users')->onDelete('set null');
             $table->timestamps();
         });
     }
