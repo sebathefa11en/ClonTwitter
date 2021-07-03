@@ -5,7 +5,9 @@ namespace App\Http\Controllers\API;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\LoginRequest;
 use App\Http\Requests\RegisterRequest;
+use App\Models\HistoryLogin;
 use App\Models\User;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\ValidationException as ValidationValidationException;
@@ -28,6 +30,13 @@ class AuthController extends Controller
 
     public function login(LoginRequest $request){
         $user = User::where('email', $request->email)->first();
+        $log = Carbon::now();
+        $history = new HistoryLogin();
+        $history->users_id = $user->id;
+        $history->timelog = $log;
+        $history->save();
+
+
 
     if (! $user || ! Hash::check($request->password, $user->password)) {
         throw ValidationValidationException::withMessages([
