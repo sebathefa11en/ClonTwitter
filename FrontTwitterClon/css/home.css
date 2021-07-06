@@ -1,0 +1,36 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+#pantalla-dividida{
+    display: flex;
+}
+
+.izquierda{
+    height: 100vh;
+    background: black;
+    width: 33%;
+}
+
+.derecha{
+    height: 100vh;
+    width: 33%;
+    background: black;
+}
+
+.centro{
+    height: 100vh;
+    width: 33%;
+    background: black;
+}
+
+.bordes{
+    border-width: 1px;
+    border-style: solid;
+    border-color: blanchedalmond;
+}
+
+.textoWhite{
+    color: blanchedalmond;
+}

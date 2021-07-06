@@ -35,8 +35,8 @@ fetch('http://127.0.0.1:8000/api/home', {
         for(let item of data){
             res.innerHTML += `
             <tr>
-                <td>${item.username}</td>
-                <td>${item.tweet}</td>
+                <td class="textoWhite">${item.username}</td>
+                <td class="textoWhite">${item.tweet}</td>
             </tr>
             `
         }
@@ -78,11 +78,12 @@ function tweetear(datos){
       })
       .then((response) =>  response.json())
       .then(data => {
+        document.getElementById('tweetin').value = '';
         tweets();
       })
       .catch(error => {
         throw(error);
-        });
+      });
 }
 
 tweets();

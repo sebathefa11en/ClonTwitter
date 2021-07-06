@@ -4,19 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/home.css">
     <title>Document</title>
 </head>
 <body>
-    <h1>HOME!!!</h1>
-    <form  id="frmtweet">
-        <label for="">tweet</label>
-        <input type="text" placeholder="Tweet..." name="tweet">
-        <button type="submit">Enviar</button>
+    <div id="pantalla-dividida">
+    <div class="izquierda textoWhite">
+        <center>
+        Izquierda
+        </center>
+    </div>
+    <div class="centro bordes">
+    <h1 class="textoWhite ">Home</h1>
+    <center>
+    <form  id="frmtweet" class="bordes">
+        <label for="" class="textoWhite">tweet</label>
+        <input type="text" placeholder="What's happening?" name="tweet" id="tweetin">
+        <button type="submit">Tweet</button>
     </form>
     <table>
         <tbody id="res">
         </tbody>
     </table>
+    </center>
+    </div>
+    <div class="derecha textoWhite">
+        <center>
+        Derecha
+        </center>
+    </div>
+    </div>
 </body>
 <script type="text/javascript" src="../js/home.js"></script>
 </html>
