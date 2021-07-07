@@ -2,7 +2,7 @@ let usuario = localStorage.getItem("usuario");
 let token = localStorage.getItem("token");
 let id = localStorage.getItem("id");
 
-if(usuario == null && token == null && id == null){
+if(usuario == null && token == null && id == null | usuario == undefined && token == undefined && id == undefined){
 
     window.location.replace("http://127.0.0.1/APITweet/FrontTwitterClon/pages/login.html");
 }
@@ -34,10 +34,15 @@ fetch('http://127.0.0.1:8000/api/home', {
 
         for(let item of data){
             res.innerHTML += `
-            <tr>
-                <td class="textoWhite">${item.username}</td>
-                <td class="textoWhite">${item.tweet}</td>
-            </tr>
+            <div class="wrappert bordes">
+              <img src="https://via.placeholder.com/75" alt="" class="onet circular--square">
+              <div class="bordes twot textoWhite">
+                <label class="textoWhite">@${item.username}</label>
+              </div>
+              <div class="bordes twott textoWhite">
+                <label class="textoWhite">${item.tweet}</label>
+              </div>
+            </div>
             `
         }
       })

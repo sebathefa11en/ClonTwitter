@@ -3,6 +3,11 @@ body{
     padding: 0;
 }
 
+@font-face {
+    src: url(fonts/segoe/SegoeAlt.ttf);
+    font-family: segoe;
+}
+
 #pantalla-dividida{
     display: flex;
 }
@@ -10,27 +15,119 @@ body{
 .izquierda{
     height: 100vh;
     background: black;
-    width: 33%;
+    width: 36%;
 }
+
+.wrapperLeft{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /*grid-gap: 10px;*/
+    grid-auto-rows: minmax(100px, auto);
+    grid-template-columns: 75% 25%;
+    justify-items: start;
+}
+
+.leftrigt{
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.btnTweetLeft{
+    color: white;
+    height: 50px;
+    width: 150px;
+    border-radius: 40px;
+    background-color: #00acee;
+}
+
+.textLeft{
+    font-size: 25px;
+}
+
 
 .derecha{
     height: 100vh;
-    width: 33%;
+    width: 36%;
     background: black;
 }
 
 .centro{
     height: 100vh;
-    width: 33%;
+    width: 27%;
     background: black;
 }
 
 .bordes{
     border-width: 1px;
     border-style: solid;
-    border-color: blanchedalmond;
+    border-color: rgb(216, 216, 216);
 }
 
 .textoWhite{
     color: blanchedalmond;
+    font-family: segoe;
 }
+
+.inputStyle{
+    color: white;
+    width: 250px;
+    height: 75px;
+    background-color: black;
+    font-size: 20px;
+}
+
+.btnTweet{
+    color: white;
+    height: 50px;
+    width: 70px;
+    border-radius:  40px;
+    background-color: #00acee;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /*grid-gap: 10px;*/
+    grid-auto-rows: minmax(100px, auto);
+    grid-template-columns: 15% 85%;
+    grid-template-rows: 100% 100%;
+}
+
+.one {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.two {
+  grid-column: 2 / 4;
+  grid-row: 1;
+}
+
+.circular--square {
+    border-radius: 50%;
+  }
+
+.wrappert{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /*grid-gap: 3px;*/
+    grid-auto-rows: minmax(100px, auto);
+    grid-template-columns: 15% 85%;
+    grid-template-rows: 25% 75%;
+}
+
+.onet {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+.twot {
+    grid-column: 2 / 4;
+    grid-row: 1;
+  }
+
+.twott {
+    grid-column: 2 / 4;
+    grid-row: 2;
+}
+
