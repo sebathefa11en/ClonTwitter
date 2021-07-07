@@ -46,6 +46,11 @@
                                 <button type="submit" class="bordes btnTweetLeft textLeft">Tweet</button>
                             </td>
                         </tr>
+                        <tr>
+                            <td>
+                                <button type="submit" class="bordes btnLogoutLeft" onclick="logout()">Logout</button>
+                            </td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
@@ -56,29 +61,42 @@
     <center>
         <div class="wrapper bordes">
             <img src="https://via.placeholder.com/75" alt="" class="one circular--square">
-            <form  id="frmtweet" class="bordes two">
-                <input type="text" placeholder="What's happening?" name="tweet" id="tweetin" class="bordes inputStyle">
-                <button type="submit" class="bordes btnTweet">Tweet</button>
+            <form  id="frmtweet" class="two">
+                <input type="text" placeholder="What's happening?" name="tweet" id="tweetin" class=" inputStyle" maxlength="250" minlength="1">
+                <button type="submit" class=" btnTweet">Tweet</button>
             </form>
         </div>
-        <!--<div class="wrappert bordes">
-            <img src="https://via.placeholder.com/75" alt="" class="onet circular--square">
-            <div class="bordes twot textoWhite">
-                <label class="textoWhite">Nombresito</label>
-            </div>
-            <div class="bordes twott textoWhite">
-                <label class="textoWhite">Nombresito</label>
-            </div>
-        </div>-->
         <div id="res">
-
         </div>
     </center>
     </div>
     <div class="derecha textoWhite">
-        <center>
-        Derecha
-        </center>
+        <div class="izquierda textoWhite">
+            <div class="wrapperRigth">
+                <div class="rigtleft">
+                    <input type="text" placeholder="Search Twitter" class="searchRight">
+                    <table class="textRigth trendsRigth">
+                        <tbody>
+                            <tr>
+                                <td>Trends for you</td>
+                            </tr>
+                            <tr>
+                                <td>#DebatePrimariasxLaRed</td>
+                            </tr>
+                            <tr>
+                                <td>DementeMega</td>
+                            </tr>
+                            <tr>
+                                <td>VOTE FOR LOKI</td>
+                            </tr>
+                            <tr>
+                                <td><a href="" style="color: rgb(25, 135, 238);">Show more</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
     </div>
     </div>
 </body>

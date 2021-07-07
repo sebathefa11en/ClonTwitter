@@ -36,10 +36,10 @@ fetch('http://127.0.0.1:8000/api/home', {
             res.innerHTML += `
             <div class="wrappert bordes">
               <img src="https://via.placeholder.com/75" alt="" class="onet circular--square">
-              <div class="bordes twot textoWhite">
-                <label class="textoWhite">@${item.username}</label>
+              <div class="twot textoWhite">
+                <label class="textoWhite" >@${item.username}</label>
               </div>
-              <div class="bordes twott textoWhite">
+              <div class="twott textoWhite">
                 <label class="textoWhite">${item.tweet}</label>
               </div>
             </div>
@@ -85,6 +85,31 @@ function tweetear(datos){
       .then(data => {
         document.getElementById('tweetin').value = '';
         tweets();
+      })
+      .catch(error => {
+        throw(error);
+      });
+}
+
+function logout(){
+  fetch('http://127.0.0.1:8000/api/logout', {
+        headers : { 
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+          'X-Requested-With': 'XMLHttpRequest',
+          'Authorization': tokenBearer
+         },
+         cache: 'no-cache',
+         credentials: 'same-origin',
+         referrerPolicy: 'no-referrer',
+         mode: 'cors',
+         method: 'POST',
+  
+      })
+      .then((response) =>  response.json())
+      .then(data => {
+        localStorage.clear();
+        window.location.replace("http://127.0.0.1/APITweet/FrontTwitterClon/pages/login.html");
       })
       .catch(error => {
         throw(error);

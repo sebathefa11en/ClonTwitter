@@ -1,6 +1,8 @@
 body{
     margin: 0;
     padding: 0;
+    background-color: black;
+    background-attachment: fixed;
 }
 
 @font-face {
@@ -14,8 +16,7 @@ body{
 
 .izquierda{
     height: 100vh;
-    background: black;
-    width: 36%;
+    width: 32%;
 }
 
 .wrapperLeft{
@@ -32,39 +33,88 @@ body{
     grid-row: 1;
 }
 
+.btnLogoutLeft{
+    color: white;
+    height: 50px;
+    width: 150px;
+    border-radius: 40px;
+    background-color: rgb(31, 29, 29);
+    font-family: segoe;
+    font-size: 25px;
+    font-family: segoe;
+}
+
 .btnTweetLeft{
     color: white;
     height: 50px;
     width: 150px;
     border-radius: 40px;
     background-color: #00acee;
+    font-family: segoe;
 }
 
 .textLeft{
     font-size: 25px;
+    font-family: segoe;
 }
 
 
 .derecha{
     height: 100vh;
-    width: 36%;
-    background: black;
+    width: 32%;
+}
+
+.searchRight{
+    margin-top: 2px;
+    border-radius: 45px;
+    background: rgb(31, 29, 29);
+    font-size: 19px;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    height: 40px;
+    font-family: segoe;
+    margin-bottom: 15px;
+}
+
+.wrapperRigth{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /*grid-gap: 10px;*/
+    grid-auto-rows: minmax(100px, auto);
+    grid-template-columns: 50% 50%;
+    justify-items: end;
+}
+
+.rigtleft{
+    grid-column: 1 / 4;
+    grid-row: 1;
+    margin-left: 10px;
+}
+
+.textRigth{
+    font-size: 20px;
+    font-family: segoe;
+}
+
+.trendsRigth{
+    background: rgb(31, 29, 29);
+    border-radius: 35px;
 }
 
 .centro{
     height: 100vh;
-    width: 27%;
-    background: black;
+    width: 36%;
 }
 
 .bordes{
     border-width: 1px;
     border-style: solid;
-    border-color: rgb(216, 216, 216);
+    border-color: rgb(31, 29, 29);
 }
 
 .textoWhite{
-    color: blanchedalmond;
+    color: white;
     font-family: segoe;
 }
 
