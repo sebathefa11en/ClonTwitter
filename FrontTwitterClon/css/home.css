@@ -16,7 +16,7 @@ body{
 
 .izquierda{
     height: 100vh;
-    width: 32%;
+    width: 38%;
 }
 
 .wrapperLeft{
@@ -181,3 +181,87 @@ body{
     grid-row: 2;
 }
 
+/* Fin MODAL Register*/
+
+@media screen and (max-width: 1640px) {
+    #pantalla-dividida{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .izquierda {
+        width: 40%;
+    }
+    .derecha {
+        width: 32%;
+    }
+
+    .centro{
+        width: 34%;
+    }
+
+}
+
+@media screen and (max-width: 1600px) {
+    #pantalla-dividida{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .izquierda {
+        width: 33%;
+    }
+    .derecha {
+        width: 33%;
+    }
+
+    .centro{
+        width: 34%;
+    }
+
+    .wrapperLeft{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: minmax(100px, auto);
+        grid-template-columns: 50% 50%;
+        justify-items: start;
+    }
+    
+    .leftrigt{
+        grid-column: 2;
+        grid-row: 1;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    #pantalla-dividida{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .izquierda {
+        width: 100%;
+        display: none;
+    }
+    .derecha {
+        width: 100%;
+        display: none;
+    }
+
+    .centro{
+        width: 100%;
+    }
+
+    .wrapperLeft{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: minmax(100px, auto);
+        grid-template-columns: 50% 50%;
+        justify-items: start;
+    }
+    
+    .leftrigt{
+        grid-column: 2;
+        grid-row: 1;
+    }
+}

@@ -17,6 +17,7 @@ class CreateTweetsTable extends Migration
             $table->id();
             $table->string('tweet');
             $table->unsignedBigInteger('user_id')->nullable();
+            $table->timestamp('date');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('set null');
             $table->timestamps();
         });

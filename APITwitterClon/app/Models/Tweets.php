@@ -11,7 +11,8 @@ class Tweets extends Model
 
     protected $fillable = [
         'tweet',
-        'user_id'
+        'user_id',
+        'date'
     ];
 
     protected $hidden = [

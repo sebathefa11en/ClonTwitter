@@ -37,7 +37,7 @@ fetch('http://127.0.0.1:8000/api/home', {
             <div class="wrappert bordes">
               <img src="https://via.placeholder.com/75" alt="" class="onet circular--square">
               <div class="twot textoWhite">
-                <label class="textoWhite" >@${item.username}</label>
+                <label class="textoWhite" >@${item.username}    ${item.date}</label>
               </div>
               <div class="twott textoWhite">
                 <label class="textoWhite">${item.tweet}</label>
@@ -109,7 +109,7 @@ function logout(){
       .then((response) =>  response.json())
       .then(data => {
         localStorage.clear();
-        window.location.replace("http://127.0.0.1/APITweet/FrontTwitterClon/pages/login.html");
+        window.location.replace("http://127.0.0.1/APITweet/FrontTwitterClon/index.html");
       })
       .catch(error => {
         throw(error);

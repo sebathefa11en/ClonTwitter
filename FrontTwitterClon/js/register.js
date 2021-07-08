@@ -31,7 +31,7 @@ formulario.addEventListener('submit' , function(e){
       .then((response) =>  response.json())
       .then(data => {
         console.log(data); 
-        window.location.replace("http://127.0.0.1/APITweet/FrontTwitterClon/pages/login.html");
+        window.location.replace("http://127.0.0.1/APITweet/FrontTwitterClon/index.html");
       })
       .catch(error => {
         throw(error);

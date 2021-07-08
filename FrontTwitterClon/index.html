@@ -17,11 +17,64 @@
          <h1 class="textonBlack">Lo que esta pasando ahora</h1>
          <h2 class="unete">Unete a Twitter hoy mismo</h2>
          <div>
-         <button class="btnreg" onclick="location.href='/FrontTwitterClon/pages/sigin.html'">Registrate</button>
-         <button class="btnini" onclick="location.href='/FrontTwitterClon/pages/login.html'">Iniciar Sesion</button>
+         <!--<button class="btnreg" onclick="location.href='/FrontTwitterClon/pages/sigin.html'">Registrate</button>
+         <button class="btnini" onclick="location.href='/FrontTwitterClon/pages/login.html'">Iniciar Sesion</button>-->
+         <button class="btnreg" id='registro'>Registrate</button>
+         <button class="btnini" id='login'>Iniciar Sesion</button>
         </div>
         </div>
     </div>
     </div>
+
+    <!-- MODAL -->
+    <div id="tvesModal" class="modalContainer modalText">
+        <div class="modal-content">
+            <span class="close">×</span> 
+            <center>
+            <img src="img/kisspng-uber-new-york-city-logo-real-time-ridesharing-lyft-black-twitter-5b20f43e9eb901.5394268715288863346501.png" width="75" alt="">
+            <h2>Crear Cuenta</h2>
+            <div id="main">
+            <form  id="frmregister">
+                <label for="">Nombre: </label>
+                <input type="text" placeholder="Nombre" name="name" class="inputdesigne" style="margin-bottom: 10px;">
+                <br>
+                <label for="">Email: </label>
+                <input type="text" placeholder="Email" name="email" class="inputdesigne" style="margin-bottom: 10px;">
+                <br>
+                <label for="">Password: </label>
+                <input type="password" placeholder="Password" name="password" class="inputdesigne" style="margin-bottom: 10px;">
+                <br>
+                <label for="">Username: </label>
+                <input type="text" placeholder="Username" name="username" class="inputdesigne" style="margin-bottom: 10px;">
+                <br>
+                <button type="submit" class="btnTweetLeft">Registrar</button>
+            </form>
+            </div>
+        </center>
+        </div>
+    </div> 
+
+    <div id="tvesModal2" class="modalContainer modalText">
+        <div class="modal-content">
+            <span class="close2">×</span> 
+            <center>
+            <img src="img/kisspng-uber-new-york-city-logo-real-time-ridesharing-lyft-black-twitter-5b20f43e9eb901.5394268715288863346501.png" width="75" alt="">
+            <h2>Crear Cuenta</h2>
+            <div id="main">
+                <form  id="frmlogin">
+                    <label for="">email</label>
+                    <input type="text" placeholder="Email" name="email" class="inputdesigne" style="margin-bottom: 10px;">
+                    <br>
+                    <label for="">password</label>
+                    <input type="password" placeholder="Password" name="password" class="inputdesigne" style="margin-bottom: 10px;">
+                    <br>
+                    <button type="submit" class="btnTweetLeft">Iniciar sesion</button>
+                </form>
+            </div>
+        </center>
+        </div>
+    </div> 
+    <!-- Fin Modal -->
+    <script type="text/javascript" src="js/index.js"></script>
 </body>
 </html>

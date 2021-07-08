@@ -1,11 +1,18 @@
 body{
     margin: 0;
     padding: 0;
+    background-attachment: fixed;
+    background-color: black;
 }
 
 @font-face {
     src: url(fonts/thedonald/THE_DONALD.ttf);
     font-family: TheDonald;
+}
+
+@font-face {
+    src: url(fonts/segoe/SegoeAlt.ttf);
+    font-family: segoe;
 }
 
 #pantalla-dividida{
@@ -16,8 +23,11 @@ body{
     height: 100vh;
     background: url('img/twitterWal.png');
     background-position: center;
+    background-repeat:no-repeat;
+    background-size:cover;
     width: 54%;
 }
+
 
 .derecha{
     height: 100vh;
@@ -83,4 +93,110 @@ body{
     font-family: TheDonald;
     text-align: center;
     line-height: 56px;
+}
+
+/* MODAL Register*/
+
+.modalContainer {
+    display: none; 
+    position: fixed; 
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modalContainer .modal-content {
+    background-color: black;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid lightgray;
+    border-top: 10px solid #58abb7;
+    width: 60%;
+}
+
+.modalText{
+    font-family: segoe;
+    color: white;
+}
+
+.modalContainer .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.modalContainer .close:hover,
+
+.modalContainer .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.close2 {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close2:hover,
+
+.close2:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+#main{
+    vertical-align:middle;
+}
+
+#frmregister{
+    display: inline-block;
+    vertical-align: middle; 
+}
+
+.inputdesigne{
+    background-color: black;
+    color: white;
+    border-radius: 18px;
+    border-color: 00acee;
+    border-style: solid;
+    height: 50px;
+    width: 150px;
+    font-size: 17px;
+}
+
+.btnTweetLeft{
+    color: white;
+    height: 50px;
+    width: 150px;
+    border-radius: 40px;
+    background-color: #00acee;
+    font-family: segoe;
+}
+
+/* Fin MODAL Register*/
+
+@media screen and (max-width: 500px) {
+    #pantalla-dividida{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .izquierda, .derecha{
+        width: 100%;
+    }
+
+    .btnini, .btnreg{
+        width: 300px;
+        margin-right: 4%;
+    }
 }
